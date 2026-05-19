@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゼンゼロすごろく</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>ゼンゼロすごろく</h1>
+
+    <div class="player-setup" id="player-setup">
+        <h3>プレイヤー設定</h3>
+        <label>遊ぶ人数 (1〜4人): <input type="number" id="num-players" min="1" max="4" value="2"></label><br><br>
+        <div id="name-inputs">
+            <input type="text" id="player-1-name" placeholder="プレイヤー1の名前"><br>
+            <input type="text" id="player-2-name" placeholder="プレイヤー2の名前"><br>
+            <input type="text" id="player-3-name" placeholder="プレイヤー3の名前"><br>
+            <input type="text" id="player-4-name" placeholder="プレイヤー4の名前"><br>
+        </div><br>
+        <button id="start-game-button">ゲーム開始！</button>
+    </div>
+
+    <div id="game-area" style="display: none;">
+        <div class="game-controls">
+            <h2>現在のターン: <span id="current-player" style="color:#00ff00;">-</span></h2>
+            <button id="roll-dice-button">サイコロを振る (1d5)</button>
+            <div class="dice-display">出た目: <span id="dice-result">-</span></div>
+        </div>
+
+        <div class="message-box" id="event-message">ここにイベントが表示されます。</div>
+
+        <div class="game-board-container">
+            <img src="image_4.png" id="game-board-img" alt="すごろく盤面">
+            </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

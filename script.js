@@ -150,10 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     eventMessageDisplay.textContent += ` \\n✨ 大成功！一気に ${square.target_index} マス目までワープします！ ✨`;
                     playerPositions[currentPlayer - 1] = square.target_index;
                     updatePlayerPiecePosition(currentPlayer - 1);
-                    // ワープ先のマスのイベントも処理
-                    setTimeout(() => {
-                         handleSquareEvent(square.target_index);
-                    }, 500);
                 } else {
                     eventMessageDisplay.textContent += " \\n💦 惜しくも失敗...通常通りターンを終了します。";
                     // ターンを進める
